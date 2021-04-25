@@ -19,3 +19,5 @@ shape = SubResource( 1 )
 [node name="GroundRay" type="RayCast" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 enabled = true
+
+[node name="LadderTimer" type="Timer" parent="."]

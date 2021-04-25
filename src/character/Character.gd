@@ -2,6 +2,7 @@ extends KinematicBody
 
 # constants
 const GRAVITY = 9.8
+const Ladder = preload("res://src/Ladder.tscn")
 
 # mouse sensitivity
 export(float,0.1,1.0) var sensitivity_x = 0.5
@@ -16,10 +17,13 @@ export(float,0.1, 3.0, 0.1) var gravity_scl = 1.0
 # instance refs
 onready var player_cam := $Camera
 onready var ground_ray := $GroundRay
+onready var ladder_timer := $LadderTimer
 
 # variables
-var mouse_motion = Vector2()
-var gravity_speed = 0
+var mouse_motion := Vector2()
+var gravity_speed := 0.0
+
+var ladder : Ladder
 
 func _ready() -> void:
   Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -52,6 +56,28 @@ func _physics_process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
   if event is InputEventMouseMotion:
     mouse_motion = event.relative
+
+  if event is InputEventMouseButton:
+    if event.pressed:
+      ladder = Ladder.instance()
+      ladder.mode = RigidBody.MODE_STATIC
+      ladder.visible = true
+      ladder.rotation_degrees.x = 30
+      ladder.translation.y = 0.8
+      ladder.translation.z = -1
+      add_child(ladder)
+      
+      ladder_timer.connect("timeout", ladder, "add_part")
+      ladder_timer.set_wait_time(0.5)
+      ladder_timer.start()
+    else:
+      if ladder:
+        var t := ladder.global_transform
+        remove_child(ladder)
+        get_parent().add_child(ladder)
+        ladder.transform = t
+        ladder.mode = RigidBody.MODE_RIGID
+        ladder_timer.stop()
 
 func _axis() -> Vector3:
   var direction := Vector3()

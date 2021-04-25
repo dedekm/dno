@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://git_api.gdns"
+}, {
+"base": "Spatial",
+"class": "Ladder",
+"language": "GDScript",
+"path": "res://src/Ladder.gd"
 } ]
 _global_script_class_icons={
-"GitAPI": ""
+"GitAPI": "",
+"Ladder": ""
 }
 
 [application]
