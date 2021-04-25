@@ -1,16 +1,35 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Ladder.gd" type="Script" id=1]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 2, 0.02, 0.4 )
+extents = Vector3( 0.5, 0.02, 0.4 )
 
 [sub_resource type="CubeMesh" id=2]
-size = Vector3( 4, 0.04, 0.8 )
+size = Vector3( 0.8, 0.02, 0.1 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 1, 0.04, 0.2 )
 
 [node name="Ladder" type="RigidBody"]
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="PlankParent" type="Spatial" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="PlankCenter" type="MeshInstance" parent="PlankParent"]
 mesh = SubResource( 2 )
+material/0 = null
+
+[node name="PlankRight" type="MeshInstance" parent="PlankParent"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.3, 0, -1.31134e-08 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="PlankLeft" type="MeshInstance" parent="PlankParent"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.3, 0, 1.31134e-08 )
+mesh = SubResource( 3 )
 material/0 = null
