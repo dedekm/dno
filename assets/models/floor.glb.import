@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/floor.glb-c4d06ba1e12f1cbea39fd0e39b2e7b9e.scn"
+path="res://.import/floor.glb-bcd9754a2ff31a4b3ee74e005c095fdf.scn"
 
 [deps]
 
-source_file="res://src/assets/models/floor.glb"
-dest_files=[ "res://.import/floor.glb-c4d06ba1e12f1cbea39fd0e39b2e7b9e.scn" ]
+source_file="res://assets/models/floor.glb"
+dest_files=[ "res://.import/floor.glb-bcd9754a2ff31a4b3ee74e005c095fdf.scn" ]
 
 [params]
 
