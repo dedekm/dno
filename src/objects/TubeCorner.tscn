@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/models/tuberCorner.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/materials/metal.tres" type="Material" id=2]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.323069
+height = 0.808132
+
+[sub_resource type="CylinderShape" id=2]
+radius = 0.321776
+height = 0.717554
+
+[node name="MeshInstance" type="StaticBody"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -3.5339e-08, 0.808463, 0.129297, -1, -4.37114e-08, 0, 4.60793e-09, -0.105417, 0.991606, -0.345668, 0, 0.0205233 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( -9.55395e-09, 0.218569, 0.975821, -1, -4.37114e-08, 0, 4.26545e-08, -0.975821, 0.218569, -0.718141, 0, 0.425236 )
+shape = SubResource( 2 )
