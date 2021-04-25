@@ -13,6 +13,7 @@ export(float,1.0, 30.0) var jump_speed = 5
 
 # instance refs
 onready var face := $Face
+onready var hands := $Face/Hands
 onready var camera := $Face/Camera
 onready var ground_ray := $GroundRay
 onready var ladder_timer := $LadderTimer
@@ -59,9 +60,8 @@ func _input(event: InputEvent) -> void:
       ladder.mode = RigidBody.MODE_STATIC
       ladder.visible = true
       ladder.rotation_degrees.x = 30
-      ladder.translation.y = 0.8
       ladder.translation.z = -1
-      add_child(ladder)
+      hands.add_child(ladder)
 
       ladder_timer.connect("timeout", ladder, "add_part")
       ladder_timer.set_wait_time(0.5)
@@ -69,7 +69,7 @@ func _input(event: InputEvent) -> void:
     else:
       if ladder:
         var t := ladder.global_transform
-        remove_child(ladder)
+        hands.remove_child(ladder)
         get_parent().add_child(ladder)
         ladder.transform = t
         ladder.mode = RigidBody.MODE_RIGID
