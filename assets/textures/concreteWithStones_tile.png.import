@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/floor_tile.png-1b4ed64edb2114caedf5f77792e369dc.s3tc.stex"
-path.etc="res://.import/floor_tile.png-1b4ed64edb2114caedf5f77792e369dc.etc.stex"
+path.s3tc="res://.import/concreteWithStones_tile.png-eeb3012e114dff448bde10948f45da3b.s3tc.stex"
+path.etc="res://.import/concreteWithStones_tile.png-eeb3012e114dff448bde10948f45da3b.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/floor_tile.png"
-dest_files=[ "res://.import/floor_tile.png-1b4ed64edb2114caedf5f77792e369dc.s3tc.stex", "res://.import/floor_tile.png-1b4ed64edb2114caedf5f77792e369dc.etc.stex" ]
+source_file="res://assets/textures/concreteWithStones_tile.png"
+dest_files=[ "res://.import/concreteWithStones_tile.png-eeb3012e114dff448bde10948f45da3b.s3tc.stex", "res://.import/concreteWithStones_tile.png-eeb3012e114dff448bde10948f45da3b.etc.stex" ]
 
 [params]
 
