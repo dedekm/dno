@@ -64,7 +64,7 @@ func _input(event: InputEvent) -> void:
       hands.add_child(ladder)
 
       ladder_timer.connect("timeout", ladder, "add_part")
-      ladder_timer.set_wait_time(0.5)
+      ladder_timer.set_wait_time(0.3)
       ladder_timer.start()
     else:
       if ladder:
