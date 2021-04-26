@@ -21,3 +21,10 @@ func add_part() -> void:
   add_child(dup_plank)
   
   length += 1
+
+func _physics_process(_delta: float) -> void:
+  if translation.y < -50:
+    print("deleted")
+    queue_free()
+
+  pass
