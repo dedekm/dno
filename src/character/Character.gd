@@ -64,6 +64,10 @@ func _physics_process(delta: float) -> void:
   face.rotate_y(deg2rad(20)* - mouse_motion.x * sensitivity_x * delta)
 
   mouse_motion = Vector2()
+  
+  if global_transform.origin.y < -50:
+    level.playable = false
+    level.add_red_filter(0.9)
 
   pass
 
