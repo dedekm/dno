@@ -59,8 +59,12 @@ func _integrate_forces(_state: PhysicsDirectBodyState) -> void:
 
 func _physics_process(delta: float) -> void:
   # camera rotation
-  camera.rotate_x(deg2rad(20) * - mouse_motion.y * sensitivity_y * delta)
+  var rot_x : float = deg2rad(20) * - mouse_motion.y * sensitivity_y * delta
+  camera.rotate_x(rot_x)
   camera.rotation.x = clamp(camera.rotation.x, deg2rad(-47), deg2rad(47))
+  hands.rotate_x(rot_x)
+  hands.rotation.x = clamp(camera.rotation.x, deg2rad(-20), deg2rad(20))
+  
   face.rotate_y(deg2rad(20)* - mouse_motion.x * sensitivity_x * delta)
 
   mouse_motion = Vector2()
