@@ -63,7 +63,7 @@ func _input(event: InputEvent) -> void:
       ladder.translation.z = -1
       hands.add_child(ladder)
 
-      ladder_timer.connect("timeout", ladder, "add_part")
+      ladder_timer.connect("timeout", self, "add_ladder_part")
       ladder_timer.set_wait_time(0.3)
       ladder_timer.start()
     else:
@@ -74,6 +74,11 @@ func _input(event: InputEvent) -> void:
         ladder.transform = t
         ladder.mode = RigidBody.MODE_RIGID
         ladder_timer.stop()
+        ladder = null
+
+func add_ladder_part() -> void:
+  if ladder:
+    ladder.add_part()
 
 func get_direction_force() -> Vector3:
   var m := Vector3()
