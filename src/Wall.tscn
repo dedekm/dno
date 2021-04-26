@@ -1,16 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[sub_resource type="CubeMesh" id=1]
-size = Vector3( 2, 2, 0.5 )
+[ext_resource path="res://assets/models/4x8wall.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/materials/mountineWall.tres" type="Material" id=2]
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.066, 0.962, 15.827 )
 
 [node name="Wall" type="StaticBody"]
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 1 )
-material/0 = null
-
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.25, 0, 0, 0 )
-shape = SubResource( 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.25, -0.917912, 0, -0.0169983 )
+shape = SubResource( 1 )
+
+[node name="4x8wall" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0369937, -1.5279, 0.0163565 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
