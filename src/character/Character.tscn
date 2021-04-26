@@ -20,7 +20,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0 )
 
 [node name="HandRight" parent="Face/Hands" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0 )
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0 )
 
 [node name="Camera" type="Camera" parent="Face"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0 )
