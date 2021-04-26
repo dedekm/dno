@@ -1,5 +1,7 @@
 extends Spatial
 
+var playable := true
+
 onready var env : Environment = $WorldEnvironment.environment
 onready var red_fade_out := $RedFadeOut
 

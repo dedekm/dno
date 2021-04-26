@@ -74,26 +74,25 @@ func _input(event: InputEvent) -> void:
   if event is InputEventMouseButton:
     if event.pressed:
       ladder = Ladder.instance()
-      ladder.mode = RigidBody.MODE_STATIC
-      ladder.visible = true
-      ladder.rotation_degrees.x = 20
-      ladder.translation.z = -1
       hands.add_child(ladder)
 
       ladder_timer.connect("timeout", self, "add_ladder_part")
       ladder_timer.set_wait_time(0.3)
       ladder_timer.start()
     else:
-      if ladder:
+      if ladder and level.playable:
         var t := ladder.global_transform
         hands.remove_child(ladder)
         get_parent().add_child(ladder)
         ladder.transform = t
-        ladder.mode = RigidBody.MODE_RIGID
+        ladder.body.mode = RigidBody.MODE_RIGID
         ladder_timer.stop()
         ladder = null
 
 func add_ladder_part() -> void:
+  if !level.playable:
+    return
+
   if ladder:
     ladder.add_part()
     
