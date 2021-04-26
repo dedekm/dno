@@ -23,7 +23,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350541, 0.415714, 2.29613 )
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
 
-[node name="RigidBody" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2 )
-
 [node name="Koridor" parent="." instance=ExtResource( 1 )]
