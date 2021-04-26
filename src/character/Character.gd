@@ -59,7 +59,7 @@ func _input(event: InputEvent) -> void:
       ladder = Ladder.instance()
       ladder.mode = RigidBody.MODE_STATIC
       ladder.visible = true
-      ladder.rotation_degrees.x = 30
+      ladder.rotation_degrees.x = 20
       ladder.translation.z = -1
       hands.add_child(ladder)
 
