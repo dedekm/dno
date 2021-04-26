@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/floor_tileBW.png-805b5c33bb4030b77239faa650542297.s3tc.stex"
-path.etc="res://.import/floor_tileBW.png-805b5c33bb4030b77239faa650542297.etc.stex"
+path.s3tc="res://.import/dirtyWaves.png-251e09814d1002f1fe0e8d37e6a7ea8a.s3tc.stex"
+path.etc="res://.import/dirtyWaves.png-251e09814d1002f1fe0e8d37e6a7ea8a.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/floor_tileBW.png"
-dest_files=[ "res://.import/floor_tileBW.png-805b5c33bb4030b77239faa650542297.s3tc.stex", "res://.import/floor_tileBW.png-805b5c33bb4030b77239faa650542297.etc.stex" ]
+source_file="res://assets/textures/dirtyWaves.png"
+dest_files=[ "res://.import/dirtyWaves.png-251e09814d1002f1fe0e8d37e6a7ea8a.s3tc.stex", "res://.import/dirtyWaves.png-251e09814d1002f1fe0e8d37e6a7ea8a.etc.stex" ]
 
 [params]
 
