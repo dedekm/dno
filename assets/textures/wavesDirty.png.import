@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/dirtyWaves.png-251e09814d1002f1fe0e8d37e6a7ea8a.s3tc.stex"
-path.etc="res://.import/dirtyWaves.png-251e09814d1002f1fe0e8d37e6a7ea8a.etc.stex"
+path.s3tc="res://.import/wavesDirty.png-fd29b625cb7c7311c5d03cd764306a8d.s3tc.stex"
+path.etc="res://.import/wavesDirty.png-fd29b625cb7c7311c5d03cd764306a8d.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/dirtyWaves.png"
-dest_files=[ "res://.import/dirtyWaves.png-251e09814d1002f1fe0e8d37e6a7ea8a.s3tc.stex", "res://.import/dirtyWaves.png-251e09814d1002f1fe0e8d37e6a7ea8a.etc.stex" ]
+source_file="res://assets/textures/wavesDirty.png"
+dest_files=[ "res://.import/wavesDirty.png-fd29b625cb7c7311c5d03cd764306a8d.s3tc.stex", "res://.import/wavesDirty.png-fd29b625cb7c7311c5d03cd764306a8d.etc.stex" ]
 
 [params]
 

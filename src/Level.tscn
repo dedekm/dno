@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Floor.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/objects/Wall4x4.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/character/Character.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Level.gd" type="Script" id=4]
+[ext_resource path="res://src/objects/Wall4x4_corner.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 1, 1, 1, 1 )
@@ -25,11 +26,11 @@ script = ExtResource( 4 )
 
 [node name="Walls" type="Spatial" parent="."]
 
-[node name="Wall" parent="Walls" instance=ExtResource( 2 )]
-transform = Transform( -0.0322132, 0, -0.999481, 0, 1, 0, 0.999481, 0, -0.0322132, 0.026403, 3.18978, -2.82069 )
+[node name="Wall4x4_corner" parent="Walls" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.38906, 1.02207, -1.67289 )
 
-[node name="Wall2" parent="Walls" instance=ExtResource( 2 )]
-transform = Transform( -0.0322132, 0, -0.999481, 0.999481, -4.37114e-08, -0.0322132, -4.36887e-08, -1, 1.40808e-09, 0.0436625, 0.201253, -4.133 )
+[node name="Wall4x4" parent="Walls" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.12329, 1.48129, -3.69005 )
 
 [node name="Floors" type="Spatial" parent="."]
 
@@ -37,7 +38,10 @@ transform = Transform( -0.0322132, 0, -0.999481, 0.999481, -4.37114e-08, -0.0322
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.97617 )
 
 [node name="Floor2" parent="Floors" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0490012, 0.0235527, -2.05427 )
+
+[node name="Floor2" parent="Floors/Floor2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.26459, 0.457626, 1.71481 )
 
 [node name="Floor3" parent="Floors" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37904, -1.99354, 1.58955 )

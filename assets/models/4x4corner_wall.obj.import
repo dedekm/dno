@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/4x4corner_wall.obj-0e8c189e2a6e8530d37912c295290bd8.mesh"
+
+[deps]
+
+files=[ "res://.import/4x4corner_wall.obj-0e8c189e2a6e8530d37912c295290bd8.mesh" ]
+
+source_file="res://assets/models/4x4corner_wall.obj"
+dest_files=[ "res://.import/4x4corner_wall.obj-0e8c189e2a6e8530d37912c295290bd8.mesh", "res://.import/4x4corner_wall.obj-0e8c189e2a6e8530d37912c295290bd8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
