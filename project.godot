@@ -9,55 +9,19 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
-"class": "FrustumAABBIntersection",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/utilities/frustum_aabb_intersection.gd"
-}, {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://git_api.gdns"
 }, {
-"base": "Reference",
-"class": "Halton",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/utilities/halton.gd"
-}, {
 "base": "Spatial",
 "class": "Ladder",
 "language": "GDScript",
 "path": "res://src/Ladder.gd"
-}, {
-"base": "Reference",
-"class": "Matrix4",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/utilities/matrix4.gd"
-}, {
-"base": "Node",
-"class": "SceneBounds",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/utilities/scene_bounds.gd"
-}, {
-"base": "ShaderMaterial",
-"class": "TransparentVolumeOverlay",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/material/transparent_volume_overlayer.gd"
-}, {
-"base": "Resource",
-"class": "VolumetricMaterial",
-"language": "GDScript",
-"path": "res://addons/silicon.vfx.volumetrics/material/volumetric_material.gd"
 } ]
 _global_script_class_icons={
-"FrustumAABBIntersection": "",
 "GitAPI": "",
-"Halton": "",
-"Ladder": "",
-"Matrix4": "",
-"SceneBounds": "",
-"TransparentVolumeOverlay": "",
-"VolumetricMaterial": "res://addons/silicon.vfx.volumetrics/material/volumetric_material.svg"
+"Ladder": ""
 }
 
 [application]
@@ -65,14 +29,6 @@ _global_script_class_icons={
 config/name="ld48"
 run/main_scene="res://src/Level.tscn"
 config/icon="res://icon.png"
-
-[autoload]
-
-VolumetricServer="*res://addons/silicon.vfx.volumetrics/volumetric_server.gd"
-
-[editor_plugins]
-
-enabled=PoolStringArray( "res://addons/silicon.vfx.volumetrics/plugin.cfg" )
 
 [gdnative]
 
@@ -125,6 +81,7 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"
