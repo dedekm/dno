@@ -2,8 +2,9 @@ extends Spatial
 class_name Ladder
 
 const PLANK_LENGTH = 0.275
+const MAX_LENGTH = 10
 
-export var length := 1
+var length := 1
 
 # instance refs
 onready var body := $LadderBody
@@ -18,8 +19,11 @@ func _ready() -> void:
   pass
 
 func add_part() -> void:
+  if length > MAX_LENGTH:
+    return
+
   collission_shape.shape = collission_shape.shape.duplicate()
-  collission_shape.shape.extents.x += 0.275 / 2
+  collission_shape.shape.extents.x += PLANK_LENGTH / 2
   
   var dup_plank = MeshInstance
   dup_plank = plank_mesh.duplicate()
