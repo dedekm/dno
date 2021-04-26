@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 1 )
+radius = 0.02
+height = 0.04
+radial_segments = 4
+rings = 4
+
+[node name="DustParticles" type="CPUParticles"]
+amount = 2
+lifetime = 5.0
+speed_scale = 0.8
+lifetime_randomness = 0.5
+mesh = SubResource( 2 )
