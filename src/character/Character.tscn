@@ -12,9 +12,10 @@ mode = 2
 script = ExtResource( 1 )
 
 [node name="Face" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.175, 0 )
 
 [node name="Hands" type="Spatial" parent="Face"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0.225 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.475, 0.225 )
 
 [node name="HandLeft" parent="Face/Hands" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0 )
@@ -23,7 +24,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0 )
 transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0 )
 
 [node name="Camera" type="Camera" parent="Face"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0149624, 1.17271, -0.00281239 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015, 0, -0.003 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0 )

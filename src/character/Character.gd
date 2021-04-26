@@ -70,12 +70,14 @@ func _physics_process(delta: float) -> void:
   mouse_motion = Vector2()
   
   if global_transform.origin.y < -50:
-    level.playable = false
-    level.add_red_filter(0.9)
+    die()
 
   pass
 
 func _input(event: InputEvent) -> void:
+  if !level.playable:
+    return
+
   if event is InputEventMouseMotion:
     mouse_motion = event.relative
 
@@ -115,12 +117,28 @@ func apply_fall_damage(height: float) -> void:
     
   if h <= 0:
     # killed
-    level.add_red_filter(0.9)
+    die()
   elif h != health:
     # injured
     level.add_red_filter(0.3)   
   
   health = h
+
+
+func die() -> void:
+  level.add_red_filter(0.9)
+  level.playable = false
+  
+  var die_tween := Tween.new()
+  die_tween.interpolate_property(face,
+                                 "translation",
+                                  face.translation,
+                                  Vector3(face.translation.x, 0.6, face.translation.z),
+                                  3.5,
+                                  Tween.TRANS_EXPO,
+                                  Tween.EASE_OUT)
+  add_child(die_tween)
+  die_tween.start()
 
 func get_direction_force() -> Vector3:
   var m := Vector3()
