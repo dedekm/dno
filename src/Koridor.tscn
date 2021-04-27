@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/objects/Wall4x4.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/objects/Rigid_Plank.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://src/objects/GridWithPoles.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/objects/Static_Beam.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/objects/Static_Plank.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/crow.glb" type="PackedScene" id=11]
 
 [node name="Koridor" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
@@ -267,7 +268,7 @@ transform = Transform( -0.671452, -0.734595, 0.0975834, -0.726958, 0.678506, 0.1
 transform = Transform( -1, 0, -8.74228e-08, 7.64274e-15, -1, -8.74228e-08, -8.74228e-08, -8.74228e-08, 1, 4.01734, -15.5928, -18.521 )
 
 [node name="Wall4x97" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( -0.915593, 0.217412, -0.338263, -0.207533, -0.976027, -0.0655825, -0.344412, 0.0101539, 0.938764, 5.22058, -16.5272, -19.9907 )
+transform = Transform( -0.915593, 0.217412, -0.338263, -0.207533, -0.976027, -0.0655825, -0.344412, 0.0101539, 0.938764, 5.08339, -16.5272, -20.0411 )
 
 [node name="Wall4x87" parent="Walls" instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -8.74228e-08, 7.64274e-15, -1, -8.74228e-08, -8.74228e-08, -8.74228e-08, 1, 4.01734, -18.4132, -18.521 )
@@ -384,6 +385,9 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.2312
 
 [node name="Pole4" parent="Objects" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.59491, -2.1425, -6.41291 )
+
+[node name="crow" parent="Objects" instance=ExtResource( 11 )]
+transform = Transform( 0.773898, -0.527186, -0.350936, -0.207977, -0.734957, 0.645433, -0.598186, -0.426513, -0.678425, 3.52219, -9.66837, -16.463 )
 
 [node name="StaticBody" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.129614, 0.333428, -4.19922 )
