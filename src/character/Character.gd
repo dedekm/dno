@@ -62,11 +62,14 @@ func _integrate_forces(_state: PhysicsDirectBodyState) -> void:
     last_solid_y_position = global_transform.origin.y
   
   on_ground = just_landed
+  
+  if !level.playable:
+    return
 
   var jumping := 0
   if Input.is_action_just_pressed("jump") and on_ground:
     jumping = 1
-
+  
   set_axis_velocity(Vector3(0, jumping * jump_speed, 0))
   add_force(direction_force, Vector3(0, 0, 0))
 
