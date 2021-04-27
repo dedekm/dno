@@ -382,4 +382,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115378, 1.19869, -2.10573 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88988, -7.39637, -14.9136 )
 
 [node name="valve2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 1.48177, -8.70421, -10.9429 )
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 1.44204, -8.821, -10.8755 )
