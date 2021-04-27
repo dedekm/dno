@@ -314,7 +314,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.44421, -3.33667, -0.31191 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.472879, -5.48475, 0.359093 )
 
 [node name="GridWithPoles" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73477, -7.2715, -9.93767 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73477, -7.2715, -10.3238 )
 
 [node name="GridWithPoles3" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76779, -7.2715, -19.2948 )
@@ -376,10 +376,13 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.5949
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.129614, 0.333428, -4.19922 )
 
 [node name="valve" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115378, 1.19869, -2.10573 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15779, 1.19869, -2.10573 )
 
 [node name="Pole2" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88988, -7.39637, -14.9136 )
+
+[node name="Pole3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88988, -7.39637, -16.9081 )
 
 [node name="valve2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 1.44204, -8.821, -10.8755 )
