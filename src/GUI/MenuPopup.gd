@@ -1,32 +1,25 @@
 extends Popup
 
 onready var player = get_node("/root/Level/Character")
-var already_paused
-var selected_menu
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var already_paused : bool
+var selected_menu : int
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-    player = get_node("/root/Level/Character") # Replace with function body.
+    player = get_node("/root/Level/Character")
 
 func change_menu_color():
-    $Resume/ResumeLabel.set("custom_colors/font_color", Color.gray)
-    $Restart/RestartLabel.set("custom_colors/font_color", Color.gray)
-    $Quit/QuitLabel.set("custom_colors/font_color", Color.gray)
+    $ColorRect/ResumeLabel.set("custom_colors/font_color", Color.gray)
+    $ColorRect/RestartLabel.set("custom_colors/font_color", Color.gray)
+    $ColorRect/QuitLabel.set("custom_colors/font_color", Color.gray)
     
     match selected_menu:
         0:
-            $Resume/ResumeLabel.set("custom_colors/font_color", Color(1,1,1))
+            $ColorRect/ResumeLabel.set("custom_colors/font_color", Color(1,1,1))
         1:
-            $Restart/RestartLabel.set("custom_colors/font_color", Color(1,1,1))
+            $ColorRect/RestartLabel.set("custom_colors/font_color", Color(1,1,1))
         2:
-            $Quit/QuitLabel.set("custom_colors/font_color", Color(1,1,1))
-            
-            
-            
+            $ColorRect/QuitLabel.set("custom_colors/font_color", Color(1,1,1))
+
 func _input(event):
     if not visible:
         if Input.is_action_just_pressed("menu"):
@@ -38,6 +31,15 @@ func _input(event):
             change_menu_color()
             # Show popup
             player.set_process_input(false)
+            
+            var x : float = (get_viewport_rect().size.x - 200) / 2
+            var y : float = (get_viewport_rect().size.y - 100) / 2
+            $ColorRect.margin_left = x
+            $ColorRect.margin_right = x + 200
+            $ColorRect.margin_top = y
+            $ColorRect.margin_bottom = y + 100
+            
+            
             popup()
     else:
         if Input.is_action_just_pressed("ui_down"):
@@ -49,7 +51,7 @@ func _input(event):
             else:
                 selected_menu = 2
             change_menu_color()
-        elif Input.is_action_just_pressed("jump"):
+        elif Input.is_action_just_pressed("ui_accept"):
             match selected_menu:
                 0:
                     # Resume game
@@ -64,7 +66,3 @@ func _input(event):
                 2:
                     # Quit game
                     get_tree().quit()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#    pass
