@@ -13,8 +13,8 @@ export(float,0.1,1.0) var sensitivity_x = 0.5
 export(float,0.1,1.0) var sensitivity_y = 0.4
 
 # physics
-export(float,1.0, 20.0) var speed = 10.0
-export(float,1.0, 30.0) var jump_speed = 5
+export(float,1.0, 20.0) var speed = 8.0
+export(float,1.0, 30.0) var jump_speed = 4
 
 # instance refs
 onready var level := get_parent()
