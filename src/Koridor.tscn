@@ -10,7 +10,7 @@
 [ext_resource path="res://src/objects/GridWithPoles.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/objects/Static_Beam.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/objects/Static_Plank.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/crow.glb" type="PackedScene" id=11]
+[ext_resource path="res://src/objects/Crow2.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/objects/beer.tscn" type="PackedScene" id=12]
 
 [node name="Koridor" type="Spatial"]
@@ -387,8 +387,8 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.2312
 [node name="Pole4" parent="Objects" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.59491, -2.1425, -6.41291 )
 
-[node name="crow" parent="Objects" instance=ExtResource( 11 )]
-transform = Transform( 0.773898, -0.527186, -0.350936, -0.207977, -0.734957, 0.645433, -0.598186, -0.426513, -0.678425, 3.52219, -9.66837, -16.463 )
+[node name="Crow2" parent="Objects" instance=ExtResource( 11 )]
+transform = Transform( 0.773898, -0.527186, -0.350936, -0.207977, -0.734957, 0.645433, -0.598186, -0.426513, -0.678425, 3.65794, -9.61325, -16.6567 )
 
 [node name="StaticBody" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.129614, 0.333428, -4.19922 )
