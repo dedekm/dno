@@ -157,7 +157,7 @@ func play_water_sound() -> void:
   sounds.rotation_degrees = Vector3(360 * randf(), 360 * randf(), 360 * randf())
   water_sounds.translation.x = rand_range(2, 8)
   water_sounds.play(0.5 * rand_range(1, 7))
-  water_sounds_timer.set_wait_time(5 + randf() * 10)
+  water_sounds_timer.set_wait_time(3 + randf() * 7)
   water_sounds_timer.start()
   water_sounds.get_node("Timer").start()
 
