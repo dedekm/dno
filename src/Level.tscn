@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Koridor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/DustParticles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/character/Character.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Level.gd" type="Script" id=4]
+[ext_resource path="res://assets/sounds/soundtrack.ogg" type="AudioStream" id=5]
 
 [sub_resource type="Gradient" id=1]
 
@@ -49,3 +50,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.39345, -3.76909, -0.777109 
 
 [node name="DustParticles4" parent="Particles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02626, -0.178937, 1.97469 )
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -6.0
+autoplay = true
