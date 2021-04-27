@@ -23,6 +23,9 @@ onready var hands := $Face/Hands
 onready var camera := $Face/Camera
 onready var ground_ray := $GroundRay
 onready var ladder_timer := $LadderTimer
+onready var water_sounds_timer : Timer
+onready var sounds := $Sounds
+onready var water_sounds := $Sounds/WaterDropsSounds
 
 # variables
 var mouse_motion := Vector2()
@@ -35,6 +38,16 @@ func _ready() -> void:
   last_solid_y_position = global_transform.origin.y
   Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
   ground_ray.enabled = true
+  
+  water_sounds_timer = Timer.new()
+  water_sounds_timer.one_shot = true
+  water_sounds_timer.connect("timeout", self, "play_water_sound")
+  water_sounds_timer.set_wait_time(1)
+  add_child(water_sounds_timer)
+  water_sounds_timer.start()
+
+  water_sounds.get_node("Timer").connect("timeout", water_sounds, "stop")
+  
   pass
 
 func _integrate_forces(_state: PhysicsDirectBodyState) -> void:
@@ -139,6 +152,14 @@ func die() -> void:
                                   Tween.EASE_OUT)
   add_child(die_tween)
   die_tween.start()
+  
+func play_water_sound() -> void:
+  sounds.rotation_degrees = Vector3(360 * randf(), 360 * randf(), 360 * randf())
+  water_sounds.translation.x = rand_range(2, 8)
+  water_sounds.play(0.5 * rand_range(1, 7))
+  water_sounds_timer.set_wait_time(5 + randf() * 10)
+  water_sounds_timer.start()
+  water_sounds.get_node("Timer").start()
 
 func get_direction_force() -> Vector3:
   var m := Vector3()
