@@ -324,7 +324,7 @@ transform = Transform( 1, 0, 0, 0, 0.999649, 0.026491, 0, -0.026491, 0.999649, 2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76779, -7.2715, -19.2948 )
 
 [node name="GridWithPoles2" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.873952, -0.482698, -0.0566679, 0.460974, 0.78633, 0.411326, -0.153987, -0.385602, 0.909725, 2.87508, -8.64645, -13.6339 )
+transform = Transform( 0.951164, -0.307145, 0.0308126, 0.267536, 0.870043, 0.414066, -0.153987, -0.385602, 0.909725, 2.87508, -8.64645, -13.754 )
 
 [node name="RigidPlank" parent="." instance=ExtResource( 2 )]
 transform = Transform( 5.91103e-08, 2.95552e-08, -0.676143, -0.99643, -4.35553e-08, -8.71107e-08, -3.4223e-08, 0.782932, 3.4223e-08, 1.37792, -8.75899, -19.8044 )
@@ -392,10 +392,10 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.12961
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15779, 1.19869, -2.10573 )
 
 [node name="Pole2" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89054, -7.09664, -15.2447 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89054, -7.09664, -15.2693 )
 
 [node name="Pole4" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.992881, 0.119114, 0, -0.119114, 0.992881, 0, 0, 0, 1, 2.88988, -6.75576, -15.9021 )
+transform = Transform( 0.992881, 0.119114, 0, -0.119114, 0.992881, 0, 0, 0, 1, 2.88988, -6.77962, -15.8638 )
 
 [node name="Pole3" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.737705, -9.30898, -16.0291 )
