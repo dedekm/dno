@@ -6,7 +6,7 @@
 
 [sub_resource type="CylinderShape" id=1]
 radius = 0.4
-height = 1.5
+height = 2.56136
 
 [node name="Character" type="RigidBody"]
 mode = 2
@@ -18,11 +18,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.175, 0 )
 [node name="Hands" type="Spatial" parent="Face"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.475, 0.225 )
 
-[node name="HandLeft" parent="Face/Hands" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0 )
-
 [node name="HandRight" parent="Face/Hands" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0 )
+
+[node name="HandLeft" parent="Face/Hands" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0 )
 
 [node name="Camera" type="Camera" parent="Face"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015, 0, -0.003 )
